@@ -1,0 +1,92 @@
+.form {
+    @include displayColumn() {
+    }
+    padding: 40px 30px;
+    &__label {
+        @include generalText() {
+        }
+        @include textSettings ($mainFontText, 20px, $mainFontColor);
+        padding: 12px 10px 3px;
+    }
+    &__input {
+        height: 36px;
+        width: 285px;
+        border-radius: 10px;
+        // border: 0.8px solid #6C6E8F;
+        border: none;
+        padding: 0 10px 0 10px;
+        outline: none;
+        box-shadow: 0 4px 8px 3px rgba(86, 89, 114, 0.2), 0 6px 20px 4px rgba(86, 89, 114, 0.19);
+        @include textSettings ($mainFontText, 14px, $inputColor);
+    }  
+    &__button {
+        @include textSettings ($mainFontText, 20px, $lightBlueFont);
+        height: 40px;
+        width: 210px;
+        border-radius: 10px;
+        border: none;
+        margin: 45px 35px;
+        background-color: #565972;
+        outline: none;
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+        &:hover {
+            background-color: #666980;
+            @include textSettings ($mainFontText, 21px, $lightBlueFont);
+            width: 211px;
+            height: 41px;
+        }
+    }
+    &__level, ::placeholder {
+        @include textSettings ($mainFontText, 14px, $inputColor);
+    }
+    
+    &__heroYes {
+        padding: 12px 10px 3px;
+        border: none;
+        @include display() {}
+        &--hero {
+            .hero__image {
+                margin-top: 15px;
+                width: 45px;
+                height: 60px; 
+            }
+            .hero__checkbox{
+                position: relative;
+                width: 1.5em;
+                height: 1.5em;
+                box-shadow: 0 4px 8px 3px rgba(86, 89, 114, 0.2), 0 6px 20px 4px rgba(86, 89, 114, 0.19);
+                border: none;
+                border-radius: 4px;
+                appearance: none;
+                outline: 0;
+                background: white;
+                
+                // Checkbox pointer style
+                &::before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 2px;
+                    left: 5.5px;
+                    transform: rotate(45deg);
+                    width: 6px;
+                    height: 10px;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0 2px 2px 0;
+                    opacity: 0;
+                }
+                &:checked {
+                    background: #565972;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+            .hero__label {
+                @include textSettings ($mainFontText, 15px, $mainFontColor);
+            }
+        }
+    }
+}
+

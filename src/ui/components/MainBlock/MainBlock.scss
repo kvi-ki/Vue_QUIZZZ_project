@@ -1,0 +1,7 @@
+.mainBlock {
+    @include display() {
+    }
+    padding: 30px 50px 190px;
+    background-image: linear-gradient(#D5D7DE, #6C6E8F);
+    margin: 0;
+}

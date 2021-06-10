@@ -1,0 +1,63 @@
+.header {
+    @include display(){
+    }
+    padding: 40px 5px;
+    background-color: #565972;
+}
+
+.menu {
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        &--element {
+            border: 0.8px solid #D5D7DE;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(240, 240, 240, 0.2), 0 6px 20px 0 rgba(240, 240, 240, 0.19);
+            list-style: none;
+            padding: 15px 15px;
+            margin: 0 30px;
+            width: 130px;
+            text-align: center;
+        }
+    }
+    &__link {
+        @include textSettings ($mainFontText, 20px, #D5D7DE);
+        &:hover {
+            font-size: 20.5px;
+        }
+    }
+}
+
+.logo {
+    @include textSettings ($mainFontText, 100px, $logoColor);
+    // text-shadow: 5px 5px #6C6E8F;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 6px 20px rgba(255, 255, 255, 0.2);
+    position: relative;
+    left: -30px;
+}
+
+.block {
+    position: relative;
+    &__icon {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        font-size: 18px;
+        color: $searchColor;
+        opacity: 0.6;
+    }
+    &__search {
+        text-indent: 25px;
+        border-radius: 10px;
+        background-color: #DDDFE5;
+        border: none;
+        outline: none;
+        padding: 10px 35px 10px 10px;
+        @include textSettings ($mainFontText, 15px, $searchColor);
+    }
+    ::placeholder {
+        @include textSettings ($mainFontText, 15px, $searchColor);
+    }   
+}

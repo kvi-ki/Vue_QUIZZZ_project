@@ -1,0 +1,26 @@
+.footer {
+    @include display(){
+    }
+    position: relative;
+    top: -200px;
+    &__copyright {
+        @include footerText () {
+        }
+    }
+    &__image {
+        width: 230px;
+        height: 200px;
+    }
+}
+
+.menuFooter {
+    &__list {
+        &--element {
+            list-style: none; 
+        }
+    }
+    &__link {
+        @include footerText () {
+        }
+    }
+}

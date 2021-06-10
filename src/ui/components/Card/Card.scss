@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(#D5D7DE, #6C6E8F);
+    margin: 0;
+    &__image {
+        width: 150px;
+        height: 180px;
+        border-radius: 10px;
+        border: 2px solid $mainFontColor;
+        box-shadow: 0 4px 8px 3px rgba(86, 89, 114, 0.2), 0 6px 20px 4px rgba(86, 89, 114, 0.19);
+    }
+    &__name {
+        @include textSettings ($mainFontText, 23px, #D5D7DE);
+    }
+    &__email {
+        @include textSettings ($mainFontText, 18px, #D5D7DE);
+    }
+    &__level {
+        @include textSettings ($mainFontText, 18px, #D5D7DE);
+    }
+}

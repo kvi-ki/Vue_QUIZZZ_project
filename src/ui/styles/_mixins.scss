@@ -1,0 +1,43 @@
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'ZCOOL KuaiLe', cursive; // Logo
+// font-family: 'Titillium Web', sans-serif;
+// font-family: 'Indie Flower', cursive; // for some pop-ups
+// font-family'Berkshire Swash'; // new font for the logo????
+// font-family: 'Delius', cursive;
+
+@mixin generalText() {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 13px;
+    color: $mainFontColor;
+    @content;
+}
+
+@mixin display() {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @content;
+}
+
+@mixin displayColumn() {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    @content;
+}
+
+@mixin textSettings ($font-family, $font-size, $font-Color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-Color;
+    @content;
+}
+
+@mixin footerText () {
+    font-family: $mainFontText;
+    font-size: 20px;
+    color: $footerTextColor;
+    @content;
+}
